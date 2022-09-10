@@ -14,8 +14,7 @@ public class SearchPage {
     }
 
     public ResultPage searchByText(String searchText) {
-        webDriver.findElement(searchBar).sendKeys(searchText);
-        webDriver.findElement(searchBar).sendKeys(Keys.ENTER);
+        webDriver.findElement(searchBar).sendKeys(searchText, Keys.ENTER);
         return new ResultPage(webDriver);
     }
 
